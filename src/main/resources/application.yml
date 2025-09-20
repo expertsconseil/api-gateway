@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: api-gateway
+  profiles:
+    active:
+      - dev
+  config:
+    import: configserver:http://localhost:8001
+  cloud:
+    config:
+      profile: dev
